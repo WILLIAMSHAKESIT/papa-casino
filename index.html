@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>PAPA Casino</title>
+
+		<link rel="apple-touch-icon" href="images/favicon/papa.png">
+		<link rel="icon" type="image/png" href="images/favicon/papa.png">
+		<link href="css/common.css" rel="stylesheet" type="text/css">
+		<link href="css/basic.css" rel="stylesheet" type="text/css">
+		<link href="css/layout.css" rel="stylesheet" type="text/css">
+		<link href="css/all.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/animations.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="css/odometer-theme-default.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">	
+
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/layout.js"></script>
+		<script src="js/flux.js" type="text/javascript"></script>
+		<script src="js/odometer.min.js"></script>		
+		<script src="js/flux.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="wrap">
+		<!-- start of hero section before login -->	
+		<div id="header_wrap">
+			<div class="header_box">
+				<div class="gnb_wrap">
+					<div class="gnb">
+						<ul>
+							<li><a href="deposit.html" ><img src="images/gnb1.png"><img src="images/gnb1.png" style="display:none;" class="mouseover3"></a></li>
+							<li><a href="withdraw.html" ><img src="images/gnb2.png"><img src="images/gnb2.png" style="display:none;" class="mouseover3"></a></li>
+							<li><a href="event.html" ><img src="images/gnb6.png"><img src="images/gnb6.png" style="display:none;" class="mouseover3"></a></li>
+							<li><a href="notice.html" ><img src="images/gnb7.png"><img src="images/gnb7.png" style="display:none;" class="mouseover3"></a></li>
+							<li><a href="customerservice.html" ><img src="images/gnb8.png"><img src="images/gnb8.png" style="display:none;" class="mouseover3"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>      
+				<div class="login_wrap">
+					<div class="login">
+						<span class="login-title">Login</span>
+						<ul>
+							<li><input name="login_id" id="login_id" type="text" class="input_login" placeholder="아이디"></li>                    
+							<li><input name="login_pw" id="login_pw" type="password" onkeypress="if(event.keyCode == 13) LoginProc('pc');" class="input_login" placeholder="비밀번호"></li>                
+							<li><a href="#" onclick="javascript:LoginProc('pc');"><img src="images/login_btn1.png"></a></li>                
+							<li><a href="#" onclick="tabActionPop('','join');" class="casino_1_open"><img src="images/login_btn2.png"></a></li>                                         
+						</ul>
+					</div>     
+				</div>
+			</div>
+		</div>
+
+		<div class="side-nav">
+			<div class="menu-items">
+				<a class="nav-item" href="deposit.html"><i class="fa-solid fa-piggy-bank"></i>Request for Deposit</a>
+				<a class="nav-item" href="withdraw.html"><i class="fa-solid fa-vault"></i>Withdrawal Request</a>
+				<a class="nav-item" href="event.html"><i class="fa-solid fa-martini-glass-citrus"></i>Event</a>
+				<a class="nav-item" href="notice.html"><i class="fa-solid fa-bell"></i>Notice</a>
+				<a class="nav-item" href="customerservice.html"><i class="fa-solid fa-comment-dots"></i>Service Center</a>
+			</div>
+			<div class="user-container-nav">
+				<div class="user-avatar">
+					<div class="avatar">
+						<i class="fa-solid fa-circle-user"></i>
+						<div class="nickname"><span>Hong Gil Dong</span></div>
+					</div>
+				</div>
+				<div class="action logout">
+					<i class="fa-solid fa-right-from-bracket"></i>
+				</div>
+				<div class="balance-wrapper">
+					<div class="balance"><i class="fa-solid fa-coins"></i><span id="user-balance">9,999,999</span><span>원</span></div>
+					<div class="point">
+						<i class="fa-solid fa-star"></i>
+						<span id="user-point">99,999</span><span>원</span>
+					</div>
+				</div>
+				<a href="inquiry.html" class="action message">
+					<i class="fa-solid fa-comments"></i>
+					<span id="message-count">7</span>
+				</a>
+				<div class="mobile quicklink">
+					<a href="inquiry.html" class="quicklink-item">
+						<i class="fa-solid fa-comments"></i>
+						<span class="quicklink-title">
+							<span>쪽지</span>
+						</span>
+						<span class="badge" id="message-count">7</span>
+					</a>
+					<a href="coupon.html" class="quicklink-item">
+						<i class="fa-solid fa-tags"></i>
+						<span class="quicklink-title">
+							<span>쿠폰상자</span>
+						</span>
+						<span class="badge" id="coupon-count">7</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-mobile">
+			<div class="top">
+				<a class="pointer" href="index.html">
+					<img src="images/logo2.png" class="pointer">
+				</a>
+				<i class="fa-solid fa-bars" id="menu-toggle"></i>
+			</div>
+			<div class="bottom">
+				<form class="header-form">
+					<input type="text" placeholder="id">  
+					<input type="password" placeholder="password">
+					<button class="login-btn">Login</button>
+					<button class="sign-btn">Sign Up</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- ▼slideshow6▼ -->
+		<div class="slider-container">
+			<div class="slider-content">
+				<div id="slider">
+					<img src="images/slideshow1.jpg">
+					<img src="images/slideshow2.jpg">
+				</div>
+			</div>
+		</div>
+		<!-- ▲slideshow6▲ -->
+
+		<div class="notice_wrap">
+			<div class="notice_box">
+				<div class="notice">
+					<MARQUEE id=NewsMarQuee onmouseover=stop() style="MARGIN-TOP: 0px; WIDTH:1300px; HEIGHT:51" onmouseout=start() scrollAmount=8 scrollDelay=5 direction=left>
+						<span style="cursor:pointer"><img src="images/notice_title.png">  ※ 휴대폰 번호 최신화 안내 ※</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span style="cursor:pointer"><img src="images/notice_title.png">  ※ 중복계정 강력제재 안내※</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span style="cursor:pointer" ><img src="images/notice_title.png">  ※코인거래소 입금 사용 안내※</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span style="cursor:pointer"><img src="images/notice_title.png">  ※쿠폰 및 콤프 사용 규정 안내※</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span style="cursor:pointer"><img src="images/notice_title.png">  ※게임사 출금지연 안내※</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span style="cursor:pointer"><img src="images/notice_title.png">  ※레벨별 혜택 안내※</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</MARQUEE>
+				</div>
+			</div>
+		</div>
+		<!-- start of hero section before login -->	
+
+		<div class="jackpot_wrap">
+			<div class="jackpot">
+				<img src="images/all_jackpot.png" width="160">
+				<br>
+				<h1 id="JackpotMoney" class="jackpot-text"></h1>
+			</div>
+		</div>
+		<div class="main_best_wrap">
+			<div class="main_best_box">
+				<div class="main_best_title"><img src="images/slot_title.png"></div>
+				<div class="main-selection">
+					<a href="javascript:void(0)" class="toggle active" data-val="slot">	
+						<img src="images/slot.png">
+						슬롯게임
+						<i class="fa-solid fa-caret-down"></i>
+					</a>
+					<a href="javascript:void(0)" class="toggle" data-val="casino">
+						<img src="images/casino.png">
+						<i class="fa-solid fa-caret-down"></i>
+						라이브카지노
+					</a>
+				</div>
+				<div class="game_list_wrap card-wraps">
+					<ul class="slot-cards">
+						<li>
+							<a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" >
+								<img src="images/slot01.png"><img src="images/over01.png" class="mouseover2" style="display:none;">
+							</a>
+						</li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/slot02.png"><img src="images/over01.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/slot03.png"><img src="images/over01.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/slot04.png"><img src="images/over01.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/slot05.png"><img src="images/over01.png" class="mouseover2" style="display:none;"></a></li> 
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/slot06.png"><img src="images/over01.png" class="mouseover2" style="display:none;"></a></li>                            
+					</ul> 
+					<ul class="casino-cards hide">
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/asiagaming.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/microgaming.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/evolution.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/pragmatic.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/uig.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li> 
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/sexygaming.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/dreamgaming.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/allbet.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/wmcasino.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/bbin.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/vivogaming.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li> 
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/botaspeed.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>                            
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/dowinn.png"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>                            
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/ezugi.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>                            
+						<li><a href="#none" onMouseOver="show_over(this);" onMouseOut="show_out(this);" ><img src="images/gameplay.jpg"><img src="images/over02.png" class="mouseover2" style="display:none;"></a></li>                            
+					</ul> 
+				</div>        
+			</div>
+		</div>
+		
+		<div class="all_title_wrap">
+			<div class="all_title_box">
+				<div class="all_title">
+					<img src="images/all_title.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="all_wrap">
+			<div class="all_box all-game-wraps">
+				<div class="con_box00">    
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/1x2gaming.png" ></div><div class="box022">와즈단</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/gameart.png" ></div><div class="box022">어거스트게이밍</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/gamzix.png" ></div><div class="box022">제네시스</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/gameplay.png" ></div><div class="box022">TPG</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/gamefishglobal.png" ></div><div class="box022">비비아이엔 슬롯</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/netgame.png" ></div><div class="box022">벳게임즈TV</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/netent.png" ></div><div class="box022">드림테크</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/nolimitcity.png" ></div><div class="box022">게임아트</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/dragoonsoft.png" ></div><div class="box022">PG소프트</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/dreamtech.png" ></div><div class="box022">톱트렌드</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/redtiger.png" ></div><div class="box022">겜직스</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/ladyluck.png" ></div><div class="box022">레이디 럭</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/revolvergaming.png" ></div><div class="box022">매버릭</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/realtimegaming.png" ></div><div class="box022">넷게임 엔터테인먼트</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/relax.png" ></div><div class="box022">OMI게이밍</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/maverick.png" ></div><div class="box022">프린트스튜디오</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/microgaming.png" ></div><div class="box022">하늘 바람 그룹</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/mobilots.png" ></div><div class="box022">스프라이트</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/betgamestv.png" ></div><div class="box022">썬더킥</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/booongo.png" ></div><div class="box022">생체 내 게임</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/blueprint.png" ></div><div class="box022">아메바</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/vivo.png" ></div><div class="box022">프라그마틱</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/bbgames.png" ></div><div class="box022">마이크로슬롯</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/bbin.png" ></div><div class="box022">플레이앤고</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/skywind.png" ></div><div class="box022">노리밋시티</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/spribe.png" ></div><div class="box022">릴렉스</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/splitrock.png" ></div><div class="box022">분고</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/spearhead.png" ></div><div class="box022">씨큐나인</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/slotmill.png" ></div><div class="box022">퀵스핀</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/thunderkick.png" ></div><div class="box022">넷엔트</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/ameba.png" ></div><div class="box022">플레이선</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/asiagaming.png" ></div><div class="box022">하바네로</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/irondogstudio.png" ></div><div class="box022">1X2 게이밍</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/augustgaming.png" ></div><div class="box022">이그드라실</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/evoplay.png" ></div><div class="box022">아시아슬롯</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/omigaming.png" ></div><div class="box022">게임플레이슬롯</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/wazdan.png" ></div><div class="box022">핵소게이밍</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/woohoogames.png" ></div><div class="box022">리얼타임게이밍</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/onetouch.png" ></div><div class="box022">블루프린트</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/yggdrasil.png" ></div><div class="box022">칼람바</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/elk.png" ></div><div class="box022">이엘케이</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/genesis.png" ></div><div class="box022">원터치</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/kalambagames.png" ></div><div class="box022">모빌랏</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/quickspin.png" ></div><div class="box022">게임피시글로벌</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/kironinteractive.png" ></div><div class="box022">리볼버</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/fantasmagames.png" ></div><div class="box022">아이언독</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/pushgaming.png" ></div><div class="box022">스트리트락</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/pragmatic.png" ></div><div class="box022">비비게임즈</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/printstudios.png" ></div><div class="box022">키론</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/playson.png" ></div><div class="box022">드래곤소프트</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/playngo.png" ></div><div class="box022">플레이펄</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/playpearls.png" ></div><div class="box022">슬롯밀</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/habanero.png" ></div><div class="box022">스피어헤드</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/hacksawgaming.png" ></div><div class="box022">우후게임즈</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/cq9.png" ></div><div class="box022">푸쉬게이밍</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/pgsoft.png" ></div><div class="box022">썬더킥</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/tpg.png" ></div><div class="box022">레드타이거</div></div></div>
+					<div  class="box_wrap02"><div class="box_box02"><div class="box02"><img src="images/ttg.png" ></div><div class="box022">레드타이거</div></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="customer_wrap">
+			<div class="customer_box">
+				<div class="customer"><img src="images/customer_title.png"><br><a href="./ChromeSetup.exe"><img src="images/customer_chrome.png"></a></div>
+				<div class="customer_sns">
+					<ul>
+						<li></li>
+						<li><img src="images/sns_phone.png" width="80">&nbsp;&nbsp;070-0000-0000</li>
+						<li><a href="#" onclick="tabActionPop('','partnership');" class="casino_1_open"><img src="images/sns_partner.png" width="80">&nbsp;&nbsp; 파트너제휴</a></li>                                
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer_wrap">
+			<img src="images/footer.png" width="320"></div>
+		</div>
+		<button class="scroll-top w-ba"><i class="fas fa-caret-up" aria-hidden="true"></i></button>
+		<script type="text/javascript" src="js/odo.js"></script>
+	</body>
+</html>

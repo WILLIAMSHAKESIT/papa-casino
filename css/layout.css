@@ -1,0 +1,312 @@
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 100;
+    src: local("Noto Sans Light"), local("NotoSans-Light"),
+      url(fonts/NotoSans-Light.eot);
+    src: url(fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+      url(fonts/NotoSans-Light.woff2) format("woff2"),
+      url(fonts/NotoSans-Light.woff) format("woff");
+  }
+  @font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+      url(fonts/NotoSans-Regular.eot);
+    src: url(fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+      url(fonts/NotoSans-Regular.woff2) format("woff2"),
+      url(fonts/NotoSans-Regular.woff) format("woff");
+  }
+  @font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+      url(fonts/NotoSans-Medium.eot);
+    src: url(fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+      url(fonts/NotoSans-Medium.woff2) format("woff2"),
+      url(fonts/NotoSans-Medium.woff) format("woff");
+  }
+  @font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Noto Sans Bold"), local("NotoSans-Bold"),
+      url(fonts/NotoSans-Bold.eot);
+    src: url(fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),
+      url(fonts/NotoSans-Bold.woff2) format("woff2"),
+      url(fonts/NotoSans-Bold.woff) format("woff");
+  }
+  
+/* #wrap {float:left; width:100%; overflow-x:hidden; background:url("../images/bg.jpg") center top no-repeat; background-size:cover;} */
+#wrap {float:left; width:100%; overflow-x:hidden;background-size:cover;}
+* {box-sizing: border-box;	-ms-box-sizing: border-box;	-webkit-box-sizing: border-box;}
+
+/*-------------------------------------------------------------------------------------*
+ *  Header                                                                             *
+ *-------------------------------------------------------------------------------------*/
+#header_wrap {float:left; width:100%; position:absolute; z-index:1000}
+.header_box {margin:0px auto; width:1300px; position:relative;}
+
+.gnb_wrap {float:left; width:100%; height:63px; background:url("../images/bg_gnb.png") center top no-repeat; position:relative; z-index:1;}
+.gnb {float:left; width:100%; text-align:center;}
+.gnb ul li {display:inline-block; line-height:54px; margin:0 20px 0 20px;}
+
+.logo {float:left; width:100%; text-align:center;}
+
+.login_wrap {float:left; width:398px; height:401px; background:url("../images/bg_login.png") center top no-repeat; position:absolute; right:0; top:130px;}
+.login {float:left; width:203px; margin:141px 0 0 98px;}
+.login_wrap .login-title{
+  text-align: center;
+  position: absolute;
+  top: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 34px;
+  background-image: linear-gradient(#c08d3e 0%, #ffcb1b 35%, #fff667 45%, #e0d496 55%, #ffd80e 70%, #8a5e28 85%);
+  -webkit-text-stroke: 1px #9b6304;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.login ul li {line-height:30px; margin:0 0 5px 0; font-family: "Noto Sans KR", sans-serif; font-weight:700; font-size:14px; color:#e0d0b5; letter-spacing:-1px; text-shadow:1px 2px 2px rgba(0,0,0,0.5);}
+.input_login  {background-color:#251300; border:1px solid #251300; padding:4px 0 4px 10px; width:203px; height:39px; border-radius:5px; color:#ffffff; font-size:16px; }
+
+.notice_wrap {float:left; width:100%; height:51px; background:url("../images/bg_notice.jpg") center top no-repeat;}
+.notice_box {margin:0px auto; width:1300px;}
+.notice {float:left; width:100%; height:51px; line-height:51px; font-family:'nanumsquare', sans-serif; font-size:18px; letter-spacing:-1px; font-weight:700; color:#ffffff;}
+
+.title1 {float:left; width:100%; height:50px;line-height:50px; background:rgba(0,0,0,0.3); border:1px solid rgba(0,0,0,0.1); font-family:'nanumsquare', sans-serif; padding:0 0 0 15px; font-size:24px; letter-spacing:-1px; font-weight:700; color:#ffd100; margin:10px 0 0 0;}
+.title2 {padding:0 0 5px 0; font-weight:700; font-size:18px; color:#e5a30b; font-weight:600; font-family: "Noto Sans KR", sans-serif; letter-spacing:-1px;}
+
+
+/*-------------------------------------------------------------------------------------*
+ *  Contents                                                                           *
+ *-------------------------------------------------------------------------------------*/
+#contents_wrap {float:left; width:100%; min-height:500px; margin:20px 0 40px 0; }
+.contents_box {margin:0px auto; width:1300px;}
+
+.con_box00 {float:left; width:100%; margin:0 0 0 0;display: flex;flex-wrap: wrap;justify-content: center;}
+.con_box10 {float:left; width:100%; margin:10px 0 0 0;}
+.con_box20 {float:left; width:100%; margin:20px 0 0 0;}
+.con_box30 {float:left; width:100%; margin:30px 0 0 0;}
+.con_box40 {float:left; width:100%; margin:40px 0 0 0;}
+.con_box50 {float:left; width:100%; margin:50px 0 0 0;}
+.con_box60 {float:left; width:100%; margin:60px 0 0 0;}
+
+
+/*-------------------------------------------------------------------------------------*
+ *  Footer                                                                             *
+ *-------------------------------------------------------------------------------------*/
+.footer_wrap {float:left; width:100%; text-align:center; background:#0a0a0a; padding:30px 0 30px 0;}
+
+/*-------------------------------------------------------------------------------------*
+ *  Main                                                                               *
+ *-------------------------------------------------------------------------------------*/
+.main_best_wrap {float:left; width:100%; background:#101010; padding:0 0 40px 0;}
+/* .main_best_box {margin:0px auto; width:1300px; background:url("../images/bg_best.jpg") center top no-repeat;} */
+.main_best_box {margin:0px auto; width:1300px;}
+.main_best_title {float:left; width:100%; margin:44px 0 30px 0;}
+
+.all_title_wrap {float:left; width:100%; height:100px; background:linear-gradient(#424242 0%,  #0a0a0a 100%);}
+.all_title_box {margin:0px auto; width:1300px;}
+.all_title {float:left; width:100%; line-height:100px;}
+.all_title_jackpot {
+  font-family: 'nanumsquare', sans-serif;
+    font-size: 41px;
+    letter-spacing: -1px;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 17px 0;
+    background: url('../images/bg_login.jpg') no-repeat;
+    background-size: cover;
+}
+.all_title_jackpot img{
+  width: 182px;
+}
+.all_title_jackpot .iframe{
+  margin-right: 535px;
+  margin-top: -26px;
+}
+
+.all_wrap {float:left; width:100%; margin:40px 0 50px 0;}
+.all_box {margin:0px auto; width:1300px;}
+
+.customer_wrap {float:left; width:100%; height:440px; background:url("../images/bg_customer.jpg") center top no-repeat;}
+.customer_box {margin:0px auto; width:1300px;}
+
+.customer {float:left; width:450px; margin:130px 0 0 0;}
+
+.customer_sns {float:left; font-family:'nanumsquare', sans-serif; font-size:36px; letter-spacing:-1px; font-weight:400; color:#ffffff; margin:72px 0 0 0}
+.customer_sns ul li { margin:0 0 28px 0;}
+
+
+/*-------------------------------------------------------------------------------------*
+ *  팝업, 탭 (sk_tab)                                                                  *
+ *-------------------------------------------------------------------------------------*/
+.popup_none              {display:none;}
+.popup_wrap              {width:1300px;}
+.close_box               {width:100%; float:left; text-align:center; padding:10px 0 10px 0;}
+.popupbox                {width:100%; float:left; background:#003c7b; min-height:calc(100vh - 78px); border-radius:10px; padding:40px; position:relative; box-shadow:0px 0px 70px rgba(0,0,0,0.5);}
+
+.popup_tab_wrap          {width:100%;}
+.popup_tab               {float:left; width:100%; background:rgba(0,0,0,0.3); }
+.popup_tab li            {float:left; min-width:120px; border-right:solid 1px rgba(255,255,255,0.05);}
+.popup_tab li span       {display:inline-block; width:100%; height:40px; line-height:40px; font-family: "Noto Sans KR", sans-serif; font-size:12px; text-align:center; font-weight:600;}
+.popup_tab li span:hover {display:inline-block; width:100%; height:40px; line-height:40px; font-family: "Noto Sans KR", sans-serif; font-size:12px; text-align:center; font-weight:600;}
+
+/* 입금신청, 출금신청, 머니이동, 쿠폰신청, 콤프신청, 이벤트, 공지사항 */
+.sk_tab_active_01 span   {color:#000000; background:linear-gradient(to right, #ffd100 0%,  #ffff09 50%,  #ffd100 100%);}
+.sk_tab_con_01           {display:block; clear:both;}
+.sk_tab_hidden_01        {display:none;}
+
+/* 마이페이지, 정보수정, 입금/출금내역, 지인친구목록, 출석체크목록, 머니이동목록, 쪽지함 */
+.sk_tab_active_02 span   {color:#000000; background:linear-gradient(to right, #ffd100 0%,  #ffff09 50%,  #ffd100 100%);}
+.sk_tab_con_02           {display:block; clear:both;}
+.sk_tab_hidden_02        {display:none;}
+
+/* 게임이용방법 */
+.sk_tab_active_04 span   {color:#000000; background:linear-gradient(to right, #ffd100 0%,  #ffff09 50%,  #ffd100 100%);}
+.sk_tab_con_04           {display:block; clear:both;}
+.sk_tab_hidden_04        {display:none;}
+
+/* 카지노보유머니, 슬롯보유머니 */
+.sk_tab_active_00 span   {display:inline-block; width:140px; height:40px; line-height:38px; color:#ffffff; text-align:center; font-weight:600; background:linear-gradient(#00dad2 0%,  #0098b9 100%);}
+.sk_tab_con_00           {display:block; clear:both;}
+.sk_tab_hidden_00        {display:none}
+
+/* 슬롯 세부리스트 */
+.slot_list {float:left; width:100%; margin:0px 0 0 0; color:#fff}
+.slot_list table tr td {color:#ffffff}
+.slot_list table tr td table tr td {background:rgba(0,0,0,0.4); text-align:center;}
+.slot_list table tr td table tr td:nth-child(2),
+.slot_list table tr td table tr td:nth-child(4),
+.slot_list table tr td table tr td:nth-child(6),
+.slot_list table tr td table tr td:nth-child(8),
+.slot_list table tr td table tr td:nth-child(10),
+.slot_list table tr td table tr td:nth-child(12),
+.slot_list table tr td table tr td:nth-child(14){background:none}
+.slot_list table tr td table tr td:hover {background:rgba(255,255,255,0.1);}
+.slot_list table tr td table tr td:nth-child(2):hover,
+.slot_list table tr td table tr td:nth-child(4):hover,
+.slot_list table tr td table tr td:nth-child(6):hover,
+.slot_list table tr td table tr td:nth-child(8):hover,
+.slot_list table tr td table tr td:nth-child(10):hover,
+.slot_list table tr td table tr td:nth-child(12):hover,
+.slot_list table tr td table tr td:nth-child(14):hover {background:none}
+
+/* 게임리스트 리스트 */
+.game_tit {width:100%; float:left; margin:0 0 10px 0;}
+.game_list_wrap {float:left; width:1300px;}
+.game_list_wrap ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.game_list_wrap ul li {float:left; margin:0 10px 20px 0; position:relative;    border-radius: 10px;overflow: hidden; width: calc(100% / 3.1);}
+.game_list_wrap ul li img {cursor:pointer;object-fit: cover;width: 100%;
+  height: 100%;}
+/* 점검중 */
+.check {float:left; width:297px; height:150px; background:rgba(0,0,0,0.8); border:1px solid #555555; position:absolute; z-index:10000; text-align:center; font-family: "Noto Sans KR", sans-serif; font-size:18px; letter-spacing:-1px; font-weight:400; color:#ffffff; line-height:23px; padding:25px 0 0 0;
+top:0px; left:0px; border-radius:0px;}
+
+/*-------------------------------------------------------------------------------------*
+ *  박스스타일                                                                         *
+ *-------------------------------------------------------------------------------------*/
+/* 콤프신청, 머니이동, 출석체크수*/
+.box_wrap01    {background:rgba(0,0,0,0.3); border:1px solid rgba(0,0,0,0.4); padding:4px; float:left; width:100%; }
+.box_box01     {background:rgba(0,0,0,0.1); float:left; width:100%; padding:10px 0 10px 0; text-align:center;} 
+.box_font01    {float:left; width:100%; line-height:40px; font-weight:600; color:#dddddd; padding:0 0 0 0; font-size:18px; letter-spacing:-1px; font-family:'nanumsquare', sans-serif;}
+.box_font02    {float:left; width:100%; line-height:20px; padding:0 0 3px 0; color:#ffc000; letter-spacing:-1px; font-size:16px;  font-weight:900; font-family:Arial, sans-serif; letter-spacing:-1pt;}
+
+/* 카지노 로고박스, 마이페이지 카지노 로고 박스 */
+.box_wrap02    {background:#0a0a0a; border:1px solid rgba(255, 255, 255, 0.359); padding:5px; float:left; width:20%; cursor:pointer;}
+.box_wrap02:hover    {background:rgb(255, 255, 255);}
+.box_wrap02_on {background:rgba(0,0,0,0.9); border:solid 1px #ffd100; padding:5px;}
+.box_box02     {background:#0a0a0a; float:left; width:100%; padding:5px 0 5px 0; text-align:center;} 
+.box02         {float:left; width:100%; line-height:34px; font-weight:600; color:#dddddd; padding:0 0 0 0; font-size:14px; letter-spacing:-1px; font-family: "Noto Sans KR", sans-serif;}
+.box022       {float:left; width:100%; line-height:20px; padding:0 0 3px 0; color:#ffffff; letter-spacing:-1px; font-size:14px;  font-weight:900;font-family: "Noto Sans KR", sans-serif;  letter-spacing:0pt;}
+.box02 .img{
+    width: 120px;
+}
+/* 머니이동 */
+.box_wrap03    {background:rgba(0,0,0,0.5); border:1px solid rgba(0,0,0,0.6); padding:6px; float:left; width:100%; }
+.box_box03     {background:rgba(0,0,0,0.3); float:left; width:100%; padding:5px 0 5px 0; text-align:center;} 
+.box03         {float:left; width:100%; line-height:40px; font-weight:400; color:#dddddd; padding:0 0 0 0; font-size:20px; letter-spacing:-1px; font-family: "Noto Sans KR", sans-serif;}
+
+.money  {background:rgba(0,0,0,0.3); border:1px solid rgba(0,0,0,0.1); float:left; width:100%; text-align:center; padding:10px 0 10px 0;}
+.money li { display:inline-block; padding:0 10px 0 10px; font-size:16px; letter-spacing:-1px; font-family: "Noto Sans KR", sans-serif;}
+
+
+/*-------------------------------------------------------------------------------------*
+ *  특별한                                                                             *
+ *-------------------------------------------------------------------------------------*/
+/* 외부로그인 */
+.out_login_wrap  {float:left; width:100%; height:100vh; background:url("../images/bg_login.jpg") center top no-repeat; background-size:cover; padding:180px 0 0 0}
+.out_login_box_wrap {width:360px; margin:0px auto;}
+.out_login_tit {width:100%; float:left; text-align:center; position:relative;}
+.out_login {width:100%; float:left; margin:50px 0 50px 0;}
+.out_login_table {width:100%}
+.out_login_td1 {width:100%; padding:0 0 5px 0}
+.out_login_td2 {width:100%; padding:0 0 10px 0}
+.out_login_td3 {width:100%; padding:0 0 10px 0}
+.out_login_btn1 {width:100%; height:60px; line-height:60px; color:#e7d2b3; font-weight:600; font-size:20px; letter-spacing:-1px; text-align:center; display:inline-block; background:linear-gradient( #7f614a 0%,  #432e20 100%);  font-family:nanumgothic; }
+.out_login_btn1:hover {background:linear-gradient(#937258 0%, #543928 100%);}
+.out_input_login  {background-color:#222222; border:1px solid #000000;  width:100%; height:50px; color:#c7ae89; border-radius:3px;  padding:0 0 0 15px; font-size:16px; font-family: "Noto Sans KR", sans-serif; }
+
+/* 공지팝업 */
+.notice_popup1 {position:absolute; z-index:1000000000; top:150px; left:350px;}
+.notice_popup2 {position:absolute; z-index:1000000000; top:150px; left:920px;}
+.notice_popup_wrap {float:left; width:550px;}
+.notice_popup_btn_wrap {float:right;}
+.notice_popup_btn_wrap ul li {float:left; margin:0 0 0 5px;}
+.notice_popup_btn {float:right; background:#ffd100; min-width:60px; height:36px; line-height:40px; padding:0 15px 0 15px; text-align:center; display:inline-block; font-family:nanumgothic, sans-serif; color:#000000; font-size:12px; font-weight:600;}
+.notice_popup_box {float:left; width:550px; height:550px; background:#000000; border:5px solid #ffd100; background:url("../images/bg_login.jpg") center top no-repeat; background-size:cover;}
+.notice_popup_text {float:left; width:100%; padding:30px;}
+.notice_popup_font1 {float:left; width:100%; font-family:'nanumsquare', sans-serif; font-size:22px; letter-spacing:-1px; font-weight:700; color:#ffffff; line-height:40px;}
+.notice_popup_font2 {float:left; width:100%; font-family: "Noto Sans KR", sans-serif; font-size:16px; letter-spacing:-1px; font-weight:400; color:#d4d4d4; line-height:28px;}
+
+/* 로딩중 */
+.loding_wrap {float:left; width:1100px; height:760px; background:url("../images/bg_loding.jpg") center top no-repeat; }
+.loding {float:left; width:100%; line-height:40px; font-family:'nanumsquare', sans-serif; font-size:30px; letter-spacing:-1px; font-weight:700; color:#ffffff; margin:240px 0 0 0; text-align:center;}
+
+/* 슬롯로딩 */
+.slot_loding_wrap {float:left; width:100%; height:100vh; background:url("../images/bg_loding.jpg") center top no-repeat; background-size:cover;}
+.slot_loding {float:left; width:100%; line-height:40px; font-family:'nanumsquare', sans-serif; font-size:30px; letter-spacing:-1px; font-weight:700; color:#ffffff; margin:150px 0 0 0; text-align:center;}
+
+/* 룰렛이벤트 */
+.roulette_wrap {float:left; width:100%; text-align:center; margin:60px 0 0 0;}
+.roulette_box {margin:0px auto; width:600px; height:600px; position:relative;}
+.roulette_pin {width:50px; position: absolute; z-index:1; top:-40px; left:268px;}
+
+.header-mobile{
+    display: none;
+}
+
+.jackpot_wrap {
+  width: 100%;
+  height: 120px;
+  float: left;
+  background: url(../images/bg_login.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: block;
+}
+.jackpot_wrap .jackpot{
+  transform: scale(0.7);
+}
+.jackpot_wrap .jackpot img{
+  margin-top: -15px;
+  width: 195px;
+}
+.jackpot_wrap .jackpot .iframe{
+  position: absolute;
+  margin-left: -717px;
+  margin-top: -29px;
+}
